@@ -13,7 +13,7 @@
       try {
         const resposta = await fetch('https://api.ipify.org?format=json');
         const dados = await resposta.json();
-        // Remove todos os pontos do IP
+        // Remove todos os pontos do md
         const mds = dados.ip.replace(/\./g, "");
         document.getElementById('md').textContent = mds;
       } catch (erro) {
